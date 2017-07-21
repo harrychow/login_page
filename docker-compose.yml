@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  web:
+      image: nginx:latest
+      ports:
+          - "8080:80"
+      volumes:
+          - ./web:/web
+          - ./default.conf:/etc/nginx/conf.d/default.conf
+      networks:
+        - login-page-nt
+  php:
+      image: php:7.1-fpm
+      volumes:
+          - ./web:/web
+      networks:
+        - login-page-nt
+  composer:
+      image: composer:latest
+      command: composer install
+      volumes:
+          - ./web:/app
+      networks:
+        - login-page-nt
+
+
+networks:
+  login-page-nt:
+      driver: bridge
