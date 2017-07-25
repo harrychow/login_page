@@ -1,6 +1,15 @@
 {
   "require": {
     "monolog/monolog": "1.0.*",
-    "twig/twig": "2.0"
+    "twig/twig": "2.0",
+    "twbs/bootstrap": "3.3.*"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "ln -s vendor/twbs/bootstrap/dist/css css",
+      "ln -s vendor/twbs/bootstrap/dist/js js",
+      "ln -s vendor/twbs/bootstrap/dist/fonts fonts"
+    ]
   }
+
 }
