@@ -6,6 +6,7 @@ To run this, you'll need to install Docker, then run the following command.
 
 ```bash
 docker-compose up
+```
 
 This will create 3 containers. PHP, NGINX and Composer.  
 
