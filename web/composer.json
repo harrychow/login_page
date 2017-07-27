@@ -1,14 +1,15 @@
 {
   "require": {
-    "monolog/monolog": "1.0.*",
     "twig/twig": "2.0",
-    "twbs/bootstrap": "3.3.*"
+    "twbs/bootstrap": "3.3.*",
+    "components/jquery": "3.2.*"
   },
   "scripts": {
     "post-autoload-dump": [
-      "ln -s vendor/twbs/bootstrap/dist/css css",
-      "ln -s vendor/twbs/bootstrap/dist/js js",
-      "ln -s vendor/twbs/bootstrap/dist/fonts fonts"
+      "ln -s /web/vendor/twbs/bootstrap/dist/js js",
+      "ln -s /web/vendor/twbs/bootstrap/dist/css css",
+      "ln -s /web/vendor/twbs/bootstrap/dist/fonts fonts",
+      "ln -s /web/vendor/components/jquery/jquery.js js/jquery.js"
     ]
   }
 
